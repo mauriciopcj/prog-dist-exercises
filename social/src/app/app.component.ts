@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import Usuario from 'src/shared/model/Usuario';
+import Usuario from 'src/app/shared/model/Usuario';
 
 @Component({
   selector: 'app-root',
@@ -8,16 +8,7 @@ import Usuario from 'src/shared/model/Usuario';
 })
 export class AppComponent {
   title = 'Social Mauricio';
-  usuario: Usuario;
-  usuarios: Array<Usuario>;
 
   constructor() {
-    this.usuario = new Usuario();
-    this.usuarios = new Array<Usuario>();
-  }
-
-  inserirUsuario(): void {
-    this.usuarios.push(this.usuario);
-    this.usuario = new Usuario();
   }
 }

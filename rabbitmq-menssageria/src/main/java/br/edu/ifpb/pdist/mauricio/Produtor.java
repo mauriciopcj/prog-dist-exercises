@@ -17,7 +17,8 @@ public class Produtor {
 
         try (
             Connection connection = connectionFactory.newConnection();
-            Channel channel = connection.createChannel()) {
+            Channel channel = connection.createChannel()
+        ) {
 
             channel.queueDeclare(NOME_FILA, false, false, false, null);
             String mensagem = "Olá Mundo";
